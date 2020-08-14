@@ -3,6 +3,7 @@
   "displayName": "TypeScript Server Controls",
   "description": "Restart the TypeScript server or toggle project-wide typechecking with a single click",
   "publisher": "davissorenson",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/davissorenson/tsservercontrols"

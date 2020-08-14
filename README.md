@@ -5,6 +5,10 @@ click.
 
 ## Release Notes
 
+### 1.0.2
+
+Add MIT license.
+
 ### 1.0.1
 
 Update extension subtitle, remove command that didn't do anything.
