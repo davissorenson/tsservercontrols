@@ -1,11 +1,15 @@
 # TypeScript Server Controls
 
 Restart the TypeScript server or toggle project-wide typechecking with a single
-click
+click.
 
 ## Release Notes
 
-### 1.0
+### 1.0.1
+
+Update extension subtitle, remove command that didn't do anything.
+
+### 1.0.0
 
 Add project-wide typechecking toggle button. The TypeScript server's
 experimental "project diagnostics" option is very useful, but is very

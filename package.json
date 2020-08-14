@@ -1,7 +1,7 @@
 {
   "name": "tsservercontrols",
   "displayName": "TypeScript Server Controls",
-  "description": "Restart the TypeScript server with a single click",
+  "description": "Restart the TypeScript server or toggle project-wide typechecking with a single click",
   "publisher": "davissorenson",
   "repository": {
     "type": "git",
@@ -18,14 +18,6 @@
     "onLanguage:typescript"
   ],
   "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "tsservercontrols.show",
-        "title": "TypeScript Server Controls"
-      }
-    ]
-  },
   "scripts": {
     "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
