@@ -2,7 +2,7 @@
   "name": "tsservercontrols",
   "displayName": "TypeScript Server Controls",
   "description": "Restart the TypeScript server with a single click",
-  "publisher": "Davis Sorenson",
+  "publisher": "tsservercontrols",
   "version": "0.2.0",
   "engines": {
     "vscode": "^1.47.0"
