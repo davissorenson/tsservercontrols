@@ -2,7 +2,7 @@
   "name": "tsservercontrols",
   "displayName": "TypeScript Server Controls",
   "description": "Restart the TypeScript server with a single click",
-  "publisher": "tsservercontrols",
+  "publisher": "davissorenson",
   "repository": {
     "type": "git",
     "url": "https://github.com/davissorenson/tsservercontrols"
