@@ -2,7 +2,7 @@
   "name": "tsservercontrols",
   "displayName": "TSServerControls",
   "description": "",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "engines": {
     "vscode": "^1.47.0"
   },
@@ -16,8 +16,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "tsservercontrols.helloWorld",
-        "title": "TS Server Controls"
+        "command": "tsservercontrols.show",
+        "title": "TypeScript Server Controls"
       }
     ]
   },

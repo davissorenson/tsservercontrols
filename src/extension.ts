@@ -12,7 +12,6 @@ export const activate = () => {
   );
 
   restartTSServerButton.command = "typescript.restartTsServer";
-  restartTSServerButton.tooltip = "Test tooltip";
   restartTSServerButton.text = "$(refresh) Restart TS Server";
   restartTSServerButton.show();
 };
