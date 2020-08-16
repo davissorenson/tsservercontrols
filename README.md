@@ -5,6 +5,12 @@ click.
 
 ## Release Notes
 
+### 1.1.0
+
+- Refresh "typecheck all" button every 10 seconds to reflect state of global
+config
+- Move buttons somewhat to the right
+
 ### 1.0.2
 
 Add MIT license.

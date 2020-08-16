@@ -1,5 +1,3 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from "vscode";
 import { StatusBarAlignment } from "vscode";
 
@@ -16,25 +14,23 @@ const toggleCheckAllTSFilesCommand = "tsservercontrols.toggleCheckAllTSFiles";
 
 const toggleCheckAllTSFilesHandler = () => {
   const userConfig = vscode.workspace.getConfiguration();
-  const currentCheckAllTSFilesValue = getCurrentCheckAllTSFilesValue(
-    userConfig
-  );
+  const newCheckAllTSFilesValue = !getCurrentCheckAllTSFilesValue(userConfig);
 
   userConfig.update(
     checkAllTSFilesConfigSection,
-    !currentCheckAllTSFilesValue,
+    newCheckAllTSFilesValue,
     vscode.ConfigurationTarget.Global
   );
 
   vscode.commands.executeCommand(
     showToggleCheckAllTSFilesButtonCommand,
-    !currentCheckAllTSFilesValue
+    newCheckAllTSFilesValue
   );
 };
 
 const toggleCheckAllTSFilesButton = vscode.window.createStatusBarItem(
   StatusBarAlignment.Left,
-  999_999
+  99
 );
 
 const showToggleCheckAllTSFilesButtonCommand =
@@ -55,7 +51,7 @@ const showToggleCheckAllTSFilesButtonHandler = (newValue?: boolean) => {
 export const activate = (context: vscode.ExtensionContext) => {
   const restartTSServerButton = vscode.window.createStatusBarItem(
     StatusBarAlignment.Left,
-    1_000_000
+    100
   );
 
   restartTSServerButton.command = "typescript.restartTsServer";
@@ -77,4 +73,12 @@ export const activate = (context: vscode.ExtensionContext) => {
   );
 
   vscode.commands.executeCommand(showToggleCheckAllTSFilesButtonCommand);
+
+  // as we are editing the global config, redraw the button in all windows every
+  // 10 seconds. this way it will match the global state most of the time.
+  setInterval(
+    () =>
+      vscode.commands.executeCommand(showToggleCheckAllTSFilesButtonCommand),
+    10_000
+  );
 };
